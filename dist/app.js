@@ -1,54 +1,23 @@
 "use strict";
-class Carro {
-    constructor(modelo, numeroDePortas) {
-        this.velocidade = 0;
-        this.modelo = modelo;
-        this.numeroDePortas = numeroDePortas;
-    }
-    acelerar() {
-        this.velocidade = this.velocidade + 10;
-    }
-    parar() {
-        this.velocidade = 0;
-    }
-    velocidadeAtual() {
-        return this.velocidade;
-    }
-}
-class Concessionaria {
-    constructor(endereco, listaDeCarros) {
-        this.endereco = endereco;
-        this.listaDeCarros = listaDeCarros;
-    }
-    fornecerEndereco() {
-        return this.endereco;
-    }
-    mostrarlistaDeCarros() {
-        return this.listaDeCarros;
-    }
-}
-class Pessoa {
-    constructor(nome, carroPreferido) {
-        this.nome = nome;
-        this.carroPreferido = carroPreferido;
-    }
-    dizerNome() {
-        return this.nome;
-    }
-    dizerCarroPreferido() {
-        return this.carroPreferido;
-    }
-    comprarCarro(carro) {
-        this.carro = carro;
-    }
-    dizerCarroQueTem() {
-        return this.carro;
-    }
-}
-let carroA = new Carro('carro A', 4);
-let carroB = new Carro('carro B', 4);
-let carroC = new Carro('carro C', 4);
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const Carro_1 = __importDefault(require("./Carro"));
+const Pessoa_1 = __importDefault(require("./Pessoa"));
+const Concessionaria_1 = __importDefault(require("./Concessionaria"));
+let carroA = new Carro_1.default('carro A', 3);
+let carroB = new Carro_1.default('carro B', 4);
+let carroC = new Carro_1.default('carro C', 4);
 let listaDeCarros = [carroA, carroB, carroC];
-let concessionaria = new Concessionaria('Av Brasil', listaDeCarros);
+let concessionaria = new Concessionaria_1.default('Av Brasil', listaDeCarros);
 let listaDeCarrosDaConcessionaria = concessionaria.mostrarlistaDeCarros();
-console.log(listaDeCarrosDaConcessionaria);
+//console.log(listaDeCarrosDaConcessionaria);
+let cliente = new Pessoa_1.default('Rafael', 'carro A');
+concessionaria.mostrarlistaDeCarros().map((carro) => {
+    if (carro['modelo'] === cliente.dizerCarroPreferido()) {
+        cliente.comprarCarro(carro);
+    }
+});
+console.log(cliente.dizerCarroQueTem());
+console.log('chsp');
