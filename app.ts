@@ -1,6 +1,7 @@
 import Carro from "./Carro"
 import Pessoa from "./Pessoa"
 import Concessionaria from "./Concessionaria"
+import Moto from "./Moto"
 
 let carroA = new Carro('carro A', 3)
 let carroB = new Carro('carro B', 4)
@@ -19,6 +20,11 @@ concessionaria.mostrarlistaDeCarros().map((carro: Carro) => {
         cliente.comprarCarro(carro)
     } 
 })
-console.log(cliente.dizerCarroQueTem())
+//console.log(cliente.dizerCarroQueTem())
 
-console.log('chsp')
+carroA.acelerar()
+console.log(carroA)
+
+let moto = new Moto()
+moto.acelerar()
+console.log(moto)
