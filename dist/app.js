@@ -22,7 +22,8 @@ concessionaria.mostrarlistaDeCarros().map((carro) => {
 });
 //console.log(cliente.dizerCarroQueTem())
 carroA.acelerar();
-console.log(carroA);
+//console.log(carroA)
 let moto = new Moto_1.default();
 moto.acelerar();
-console.log(moto);
+//console.log(moto)
+console.log(concessionaria.fornecerHorarioDeFuncionamento());

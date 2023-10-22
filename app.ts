@@ -23,8 +23,10 @@ concessionaria.mostrarlistaDeCarros().map((carro: Carro) => {
 //console.log(cliente.dizerCarroQueTem())
 
 carroA.acelerar()
-console.log(carroA)
+//console.log(carroA)
 
 let moto = new Moto()
 moto.acelerar()
-console.log(moto)
+//console.log(moto)
+
+console.log(concessionaria.fornecerHorarioDeFuncionamento)
