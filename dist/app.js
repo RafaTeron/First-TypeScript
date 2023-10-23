@@ -11,6 +11,7 @@ const ConcessionariaDao_1 = require("./ConcessionariaDao");
 const PessoaDao_1 = require("./PessoaDao");
 const MotoDao_1 = require("./MotoDao");
 const CarroDao_1 = require("./CarroDao");
+const Dao_1 = require("./Dao");
 let carroA = new Carro_1.default('carro A', 3);
 let carroB = new Carro_1.default('carro B', 4);
 let carroC = new Carro_1.default('carro C', 4);
@@ -33,13 +34,20 @@ moto.acelerar();
 //console.log(concessionaria.fornecerHorarioDeFuncionamento)
 let dao1 = new ConcessionariaDao_1.ConcessionariaDao();
 let concessionaria02 = new Concessionaria_1.default('', []);
-dao1.atualizar(concessionaria02);
+//dao1.atualizar(concessionaria02)
 let dao2 = new PessoaDao_1.PessoaDao();
 let pessoa02 = new Pessoa_1.default('', '');
-dao2.inserir(pessoa02);
+//dao2.inserir(pessoa02)
 let dao3 = new MotoDao_1.MotoDao();
 let moto02 = new Moto_1.default();
-dao3.atualizar(moto02);
+//dao3.atualizar(moto02)
 let dao4 = new CarroDao_1.CarroDao();
 let carro02 = new Carro_1.default('', 0);
-dao4.inserir(carro02);
+//dao4.inserir(carro02)
+let dao5 = new Dao_1.Dao();
+dao5.atualizar(concessionaria02);
+dao5.remover(5);
+console.log();
+let dao6 = new Dao_1.Dao();
+dao6.atualizar(pessoa02);
+dao6.remover(5);
