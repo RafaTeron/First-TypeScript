@@ -2,6 +2,10 @@ import Carro from "./Carro"
 import Pessoa from "./Pessoa"
 import Concessionaria from "./Concessionaria"
 import Moto from "./Moto"
+import { ConcessionariaDao } from "./ConcessionariaDao"
+import { PessoaDao } from "./PessoaDao"
+import { MotoDao } from "./MotoDao"
+import { CarroDao } from "./CarroDao"
 
 let carroA = new Carro('carro A', 3)
 let carroB = new Carro('carro B', 4)
@@ -29,4 +33,24 @@ let moto = new Moto()
 moto.acelerar()
 //console.log(moto)
 
-console.log(concessionaria.fornecerHorarioDeFuncionamento)
+//console.log(concessionaria.fornecerHorarioDeFuncionamento)
+
+let dao1: ConcessionariaDao = new ConcessionariaDao()
+let concessionaria02 = new Concessionaria('', []);
+
+dao1.atualizar(concessionaria02)
+
+let dao2: PessoaDao = new PessoaDao()
+let pessoa02 = new Pessoa('', '');
+
+dao2.inserir(pessoa02)
+
+let dao3: MotoDao = new MotoDao()
+let moto02 = new Moto();
+
+dao3.atualizar(moto02)
+
+let dao4: CarroDao = new CarroDao()
+let carro02 = new Carro('', 0);
+
+dao4.inserir(carro02)
